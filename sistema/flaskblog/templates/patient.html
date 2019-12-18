@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+<article class="media content-section">
+    
+    <div class="media-body">
+
+        <h2 class="article-title">{{ patient.name_patient }}</h2>
+        <p class="article-content">{{ patient.observation }}</p>
+    </div>
+</article>
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Delete?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <input class="btn btn-danger" type="submit" value="Delete">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Fecha Nacimiento</th>
+            <th scope="col">Observaciones</th>
+        </tr>
+    </thead>
+{% for patient in patients.items %}
+
+    <tbody>
+     <tr>
+            <th scope="row"><a class="article-title" href="{{ url_for('patient', patient_id=patient.id) }}">{{ patient.id }}</a></th>
+            <td>{{ patient.name_patient }}</td>
+            <td>{{ patient.birth_date }}</td>
+            <td>{{ patient.observation }}</td>
+
+        </tr>
+    </tbody>
+
+{% endfor %}
+</table>
+
+{% endblock content %}

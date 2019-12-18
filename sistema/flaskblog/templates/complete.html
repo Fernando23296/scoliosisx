@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<table border="1">
+    <tr>
+        <td style="text-align: center;">
+            <h2>Imagen Original</h2>
+        </td>
+
+        <td style="text-align: center;">
+            <h2>Imagen Procesada</h2>
+        </td>
+    </tr>
+    <tr>
+        <td width="300" style="text-align: center;"><img src="{{url_for('static', filename=image_original) }}"></td>
+        <td>Imagen original</td>
+        
+    </tr>
+    <tr>
+        <td width="600" height="350" style="text-align: center;"> <img src="{{url_for('static', filename=image_filter) }}"></td>
+        
+        <td>Imagen con filtros</td>
+    </tr>
+    <tr>
+        <td width="600" height="350" style="text-align: center;"> <img src="{{url_for('static', filename=image_points) }}"></td>
+        <td>Imagen con puntos encontrados</td>
+    </tr>
+        <tr>
+            <td width="600" height="350" style="text-align: center;"> <img src="{{url_for('static', filename=image_name) }}"></td>
+            <td>Imagen final</td>
+        </tr>
+</table>
+
+
+
+
+{% endblock content %}
