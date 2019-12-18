@@ -10,6 +10,7 @@ The project consists of a computerized system of support for medical decisions b
 <li>Determine the appropriate artificial neural network method to find key points in the curvature of the spine.</li>
 <li>Calculate the degree of curvature of the deformation of the spine from a two-dimensional mathematical curve.</li>
 </ul>
+
 ## Techniques
 <ul>
 <li> Convolutional Neural Networks </li>
